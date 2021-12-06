@@ -1,8 +1,9 @@
 const patternReducer = (state, action) => {
   switch (action.type) {
     case "RandomSwap": {
-      const e1 = Math.floor(Math.random() * 3);
-      const e2 = (e1 + 1) % 3;
+      const length = state.events.length;
+      const e1 = Math.floor(Math.random() * length);
+      const e2 = (e1 + 1) % length;
 
       let newEvents = state.events.map((oldEvent) => {
         return { ...oldEvent };
