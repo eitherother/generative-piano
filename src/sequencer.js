@@ -128,8 +128,13 @@ const Sequencer = (props) => {
   };
 
   return (
-    <div>
-      <div onClick={() => toggle()}>{playState}</div>
+    <div className="player">
+      <br />
+      <button onClick={() => toggle()}>
+        {playState === "started" ? "pause" : "play"}
+      </button>
+      <br />
+      <br />
       Volume:
       <Slider
         min={-36}
@@ -141,7 +146,7 @@ const Sequencer = (props) => {
       Speed:
       <Slider
         min={80}
-        max={200}
+        max={220}
         value={beatsPerMinute}
         onChange={tempoChange}
       ></Slider>

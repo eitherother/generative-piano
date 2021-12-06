@@ -2,7 +2,7 @@ const patterns = [
   {
     name: "Rainy Days",
     end: "9:0:0",
-    bpm: 180,
+    bpm: 200,
     events: [
       { note: "E3", time: 0 },
       { note: "G3", time: "0:1" },
@@ -32,7 +32,7 @@ const patterns = [
     ],
   },
   {
-    name: "Abstract",
+    name: "Abstract Painting",
     end: "4:2:0",
     bpm: 150,
     events: [
@@ -98,6 +98,29 @@ const patterns = [
       { note: "Gb5", time: "0:3:0" },
       { note: "Ab5", time: "0:3:2" },
       { note: "Db6", time: "1:0:0" },
+    ],
+  },
+
+  {
+    name: "Morning Air",
+    end: "3:2:0",
+    bpm: 140,
+    events: [
+      { note: "Ab4", time: 0 },
+      { note: "C5", time: "0:0:2" },
+      { note: "F5", time: "0:1:0" },
+      { note: "Bb4", time: "0:1:2" },
+      { note: "Eb5", time: "0:2:0" },
+      { note: "D6", time: "0:2:2" },
+      { note: "Bb5", time: "0:3:0" },
+
+      { note: "Ab5", time: "1:2:0" },
+      { note: "G5", time: "1:2:2" },
+      { note: "Ab5", time: "1:3:0" },
+      { note: "G5", time: "1:3:2" },
+      { note: "Ab5", time: "2:0:0" },
+      { note: "G5", time: "2:0:2" },
+      { note: "Ab5", time: "2:1:0" },
     ],
   },
 ];
