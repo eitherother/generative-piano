@@ -11,11 +11,12 @@ const Sequencer = (props) => {
   const [volume, setVolume] = useState(-10);
   const [beatsPerMinute, setBeatsPerMinute] = useState(props.pattern.bpm);
 
-  // set up Tone pipeline
+  // initialize tone.js pipeline
   const vol = useMemo(() => {
     return new Tone.Volume(volume).toDestination();
   }, []);
 
+  // intialize sampler
   const sampler = useMemo(() => {
     return new Tone.Sampler({
       urls: {
@@ -28,8 +29,8 @@ const Sequencer = (props) => {
     }).connect(vol);
   }, []);
 
+  // initalize tempo
   useEffect(() => {
-    Tone.getTransport().bpm.value = 100;
     Tone.getTransport().bpm.rampTo(props.pattern.bpm, 0.1);
     setBeatsPerMinute(props.pattern.bpm);
   }, []);
@@ -58,8 +59,8 @@ const Sequencer = (props) => {
   };
 
   const volumeChange = (e) => {
-    vol.volume.value = volume;
     setVolume(+e.target.value);
+    vol.volume.value = volume;
   };
 
   const tempoChange = (e) => {
