@@ -19,7 +19,7 @@ import G4 from "./mp3/G4.mp3";
 import A4 from "./mp3/A4.mp3";
 import B4 from "./mp3/B4.mp3";
 
-import C5 from "./mp3/C4.mp3";
+import C5 from "./mp3/C5.mp3";
 import D5 from "./mp3/D5.mp3";
 import E5 from "./mp3/E5.mp3";
 import F5 from "./mp3/F5.mp3";
